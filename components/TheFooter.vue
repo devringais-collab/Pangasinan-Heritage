@@ -17,7 +17,7 @@
 
 <script setup>
 const config = useRuntimeConfig()
-const logoSrc = `${config.app.baseURL}logo.jpg`
+const logoSrc = `${config.app.baseURL}logo.webp`
 </script>
 
 <style scoped>

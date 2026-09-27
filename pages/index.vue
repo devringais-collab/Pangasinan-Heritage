@@ -22,10 +22,10 @@ const config = useRuntimeConfig()
 const base = config.app.baseURL
 
 const sites = [
-  { id: 1, title: 'Hundred Islands', description: 'Alaminos, Pangasinan', image: `${base}alaminos.jpg` },
-  { id: 2, title: 'Bolinao Lighthouse', description: 'Bolinao, Pangasinan', image: `${base}bolinao.jpg` },
-  { id: 3, title: 'Balungao Hot Spring', description: 'Balungao, Pangasinan', image: `${base}balungao.jpg` },
-  { id: 4, title: 'Dasol Beach', description: 'Dasol, Pangasinan', image: `${base}dasol.jpg` },
+  { id: 1, title: 'Hundred Islands', description: 'Alaminos, Pangasinan', image: `${base}alaminos.webp` },
+  { id: 2, title: 'Bolinao Lighthouse', description: 'Bolinao, Pangasinan', image: `${base}bolinao.webp` },
+  { id: 3, title: 'Balungao Hot Spring', description: 'Balungao, Pangasinan', image: `${base}balungao.webp` },
+  { id: 4, title: 'Dasol Beach', description: 'Dasol, Pangasinan', image: `${base}dasol.webp` },
 ]
 </script>
 
