@@ -36,12 +36,5 @@ export default defineNuxtConfig({
   },
   experimental: {
     payloadExtraction: true,
-  },
-  routeRules: {
-    '/**': { 
-      headers: { 
-        'Cache-Control': 'public, max-age=31536000, immutable' 
-      } 
-    }
   }
 })
