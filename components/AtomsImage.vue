@@ -1,33 +1,52 @@
-<template>
-  <img
-    :src="src"
-    :alt="alt"
-    :class="`image-${variant}`"
-    :width="width"
-    :height="height"
-    loading="lazy"
-    decoding="async"
-  />
-</template>
-
-<script setup>
-defineProps({
-  src: { type: String, required: true },
-  alt: { type: String, default: '' },
-  variant: { type: String, default: 'fluid' },
-  width: { type: String, default: '400' },
-  height: { type: String, default: '300' },
+// @ts-ignore
+export default defineNuxtConfig({
+  compatibilityDate: '2024-11-01',
+  devtools: { enabled: false },
+  css: ['~/assets/main.css'],
+  app: {
+    baseURL: '/Pangasinan-Heritage/',
+    buildAssetsDir: 'assets',
+    head: {
+      title: 'Pangasinan Heritage Digital Showcase',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { 
+          name: 'description', 
+          content: 'Discover the iconic heritage sites of Pangasinan — Hundred Islands, Bolinao Lighthouse, Balungao Hot Spring, and Dasol Beach.' 
+        },
+      ],
+      link: [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+        { 
+          rel: 'stylesheet', 
+          href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap',
+          media: 'print',
+          onload: "this.media='all'"
+        }
+      ],
+      htmlAttrs: { lang: 'en' }
+    }
+  },
+  ssr: true,
+  nitro: {
+    preset: 'github_pages',
+    compressPublicAssets: true,
+  },
+  experimental: {
+    payloadExtraction: true,
+  },
+  routeRules: {
+    '/_nuxt/**': { 
+      headers: { 
+        'Cache-Control': 'public, max-age=31536000, immutable' 
+      } 
+    },
+    '/**': { 
+      headers: { 
+        'Cache-Control': 'public, max-age=3600' 
+      } 
+    }
+  }
 })
-</script>
-
-<style scoped>
-.image-fluid {
-  width: 100%;
-  height: auto;
-}
-.image-cover {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-</style>
