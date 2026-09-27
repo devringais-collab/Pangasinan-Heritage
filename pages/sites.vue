@@ -7,11 +7,15 @@
         Explore the iconic heritage sites of Pangasinan.
       </AtomsTypography>
     </main>
+    <TheFooter />
   </div>
 </template>
 
 <style scoped>
 .main {
   padding: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 60vh;
 }
 </style>

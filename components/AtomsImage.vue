@@ -15,6 +15,13 @@ defineProps({
 </script>
 
 <style scoped>
-.image-fluid { width: 100%; height: auto; }
-.image-cover { width: 100%; height: 200px; object-fit: cover; }
+.image-fluid {
+  width: 100%;
+  height: auto;
+}
+.image-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 </style>
