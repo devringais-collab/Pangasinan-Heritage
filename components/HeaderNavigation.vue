@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header__logo">
-      <img :src="logoSrc" alt="Pangasinan Heritage Logo" width="44" />
+      <img src="/logo.webp" alt="Pangasinan Heritage Logo" width="44" />
       <span class="header__title">Pangasinan Heritage</span>
     </div>
     <nav class="header__nav">
@@ -11,11 +11,6 @@
     </nav>
   </header>
 </template>
-
-<script setup>
-const config = useRuntimeConfig()
-const logoSrc = `${config.app.baseURL}logo.webp`
-</script>
 
 <style scoped>
 .header {

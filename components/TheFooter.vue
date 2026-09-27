@@ -9,7 +9,7 @@
         Promoting cultural awareness and tourism for the province's most iconic heritage sites.
       </p>
       <p class="footer__copyright">
-        © {{ new Date().getFullYear() }} Pangasinan Provincial Tourism Office. All rights reserved.
+        © {{ currentYear }} Pangasinan Provincial Tourism Office. All rights reserved.
       </p>
     </div>
   </footer>
@@ -18,6 +18,7 @@
 <script setup>
 const config = useRuntimeConfig()
 const logoSrc = `${config.app.baseURL}logo.webp`
+const currentYear = new Date().getFullYear()
 </script>
 
 <style scoped>
