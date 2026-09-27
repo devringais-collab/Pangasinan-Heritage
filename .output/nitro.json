@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-27T14:46:28.040Z",
-  "preset": "github-pages",
+  "date": "2026-09-27T14:47:53.466Z",
+  "preset": "nitro-prerender",
   "framework": {
     "name": "nuxt",
     "version": "4.5.2"
@@ -9,8 +9,7 @@
     "nitro": "2.13.4"
   },
   "commands": {
-    "preview": "npx serve public",
-    "deploy": "npx gh-pages --dotfiles -d public"
+    "preview": "npx serve ./public"
   },
   "config": {}
 }
