@@ -16,6 +16,16 @@ export default defineNuxtConfig({
           content: 'Discover the iconic heritage sites of Pangasinan — Hundred Islands, Bolinao Lighthouse, Balungao Hot Spring, and Dasol Beach.' 
         },
       ],
+      link: [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+        { 
+          rel: 'stylesheet', 
+          href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap',
+          media: 'print',
+          onload: "this.media='all'"
+        }
+      ],
       htmlAttrs: { lang: 'en' }
     }
   },

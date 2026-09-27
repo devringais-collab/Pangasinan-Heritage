@@ -1,57 +1,33 @@
 <template>
-  <div class="heritage-card">
-    <div class="heritage-card__image-wrapper">
-      <AtomsImage :src="image" :alt="title" variant="cover" />
-    </div>
-    <div class="heritage-card__content">
-      <AtomsTypography tag="h3" variant="heading2">{{ title }}</AtomsTypography>
-      <AtomsTypography tag="p" variant="body">{{ description }}</AtomsTypography>
-      <AtomsButton variant="secondary">View Details</AtomsButton>
-    </div>
-  </div>
+  <img
+    :src="src"
+    :alt="alt"
+    :class="`image-${variant}`"
+    :width="width"
+    :height="height"
+    loading="lazy"
+    decoding="async"
+  />
 </template>
 
 <script setup>
 defineProps({
-  title: { type: String, required: true },
-  description: { type: String, required: true },
-  image: { type: String, required: true },
+  src: { type: String, required: true },
+  alt: { type: String, default: '' },
+  variant: { type: String, default: 'fluid' },
+  width: { type: String, default: '400' },
+  height: { type: String, default: '300' },
 })
 </script>
 
 <style scoped>
-.heritage-card {
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  background: var(--color-card-bg);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
+.image-fluid {
+  width: 100%;
+  height: auto;
 }
-.heritage-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-}
-.heritage-card__image-wrapper {
-  overflow: hidden;
-  height: 220px;
-}
-.heritage-card__image-wrapper :deep(img) {
-  transition: transform 0.4s ease;
-}
-.heritage-card:hover .heritage-card__image-wrapper :deep(img) {
-  transform: scale(1.05);
-}
-.heritage-card__content {
-  padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  flex: 1;
-}
-.heritage-card__content :deep(.btn) {
-  margin-top: auto;
-  align-self: flex-start;
+.image-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 </style>
