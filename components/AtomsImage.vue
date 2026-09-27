@@ -3,6 +3,10 @@
     :src="src"
     :alt="alt"
     :class="`image-${variant}`"
+    :width="width"
+    :height="height"
+    loading="lazy"
+    decoding="async"
   />
 </template>
 
@@ -10,7 +14,9 @@
 defineProps({
   src: { type: String, required: true },
   alt: { type: String, default: '' },
-  variant: { type: String, default: 'fluid' }
+  variant: { type: String, default: 'fluid' },
+  width: { type: String, default: '400' },
+  height: { type: String, default: '300' },
 })
 </script>
 
