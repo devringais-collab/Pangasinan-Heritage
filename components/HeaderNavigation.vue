@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header__logo">
-      <img src="/logo.png" alt="Pangasinan Heritage Logo" width="40" />
+      <img src="/Pangasinan-Heritage/logo.png" alt="Pangasinan Heritage Logo" width="40" />
       <span class="header__title">Pangasinan Heritage</span>
     </div>
     <nav class="header__nav">
