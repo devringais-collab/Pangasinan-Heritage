@@ -33,7 +33,6 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'github_pages',
     compressPublicAssets: true,
-    minify: true,
   },
   experimental: {
     payloadExtraction: true,
